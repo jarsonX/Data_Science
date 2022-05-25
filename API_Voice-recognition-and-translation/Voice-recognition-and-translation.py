@@ -48,7 +48,7 @@ response.result
 recognized_text=response.result['results'][0]["alternatives"][0]["transcript"]
 
 #Check confidence in respect of voice recognition
-json_normalize(response.result['results'],"alternatives")
+print(json_normalize(response.result['results'],"alternatives"))
 
 ###### LANGUAGE TRANSLATOR ######
 
@@ -58,7 +58,6 @@ version_lt='2018-05-01'  #parameter required by API request
 authenticator = IAMAuthenticator(apikey_lt)
 language_translator = LanguageTranslatorV3(version=version_lt,authenticator=authenticator)
 language_translator.set_service_url(url_lt)
-language_translator
 
 #Translate text
 translation_response = language_translator.translate(text=recognized_text, model_id='en-pl')  #retrieves a dictionary
@@ -67,4 +66,4 @@ translation=translation_response.get_result()  #retrieves translation as a strin
 polish_translation = translation['translations'][0]['translation']
 
 print("The result of the translation is as follows:")
-polish_translation
+print(polish_translation)
