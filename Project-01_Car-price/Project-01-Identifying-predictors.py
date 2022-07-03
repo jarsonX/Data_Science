@@ -7,7 +7,7 @@ from scipy import stats
 %matplotlib inline 
 
 #--------------------------------------------------------------------------------------------------Load dataset
-df = pd.read_csv(r'C:\Users\krzys\Desktop\automobileEDA.csv')
+df = pd.read_csv('automobileEDA.csv')
 
 #-------------------------------------------------------------------------------------------------Check dataset
 df.dtypes
