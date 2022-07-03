@@ -125,7 +125,7 @@ print("Correlation Coefficient:", pearson_coef, " P-value:", p_value)
 sns.regplot(x="bore", y="price", data=df)
 plt.ylim(0,)
 
-#------------------------------------------------------------------------------- ---------Categorical variables
+#-----------------------------------------------------------------------------------------Categorical variables
 #make, aspiration, num-of-doors, body-style, drive-wheels, engine-location, engine-type, num-of-cylinders, 
 #fuel-system
 
